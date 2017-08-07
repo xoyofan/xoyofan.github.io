@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>长安汽车-品质驱动生活</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Microsoft Yahei;
+				background-color: #000;
+				color: #fff;
+				font-size: 18px;
+		        text-align: left;
+			    line-height: 33px;
+				margin: 0px;
+				overflow: hidden;
+			}
+			ul{
+				-webkit-padding-start: 0px;
+				-moz-padding-start: 0px;
+				padding-start: 0px;
+			}
+			li {
+				box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+				background-color: rgba(0, 127, 127, 0.498039);
+				border: 1px solid rgba(127,255,255,0.25);
+				margin: 5px;
+				padding: 2px;
+				list-style: none;
+			}
+			li:hover {
+				box-shadow: -5px 0px 22px rgba(0,255,255,0.75);
+				border: 1px solid rgba(127,255,255,0.75);
+			}
+
+			.topLeft{
+				position: absolute;
+			    left: 10px;
+				text-align: center;
+				top: 0px ; 
+			}
+			.topLeft ul{
+			    width: 220px;
+			    display: none;
+			}
+			.topLeft ul li{
+			    font-size: 14px;
+			    margin: 2px;
+			    padding: 0 0 0 4px;
+			    text-align: left;
+			}
+			.topRight{
+				position: absolute;
+			    right: 0px;
+				text-align: center;
+			}
+			.topRight ul{
+			    width: 220px;
+				margin-top: 0px ;
+				display: none;
+			}
+			
+			#menu{
+			    right:180px;
+			    position: absolute;
+			    transition:transform 0.4s ease-out;
+			    -webkit-transition:transform 0.4s ease-out;
+			    -moz-transition:transform 0.4s ease-out;
+			}
+	
+			
+			.topRight ul ul{
+				width:200px;
+				margin-top: 0px
+			}
+			.topRight ul ul li{
+				display: none;
+			}
+			.topRight ul ul:hover li{
+				display: block;
+			}
+	
+			#parameter0{
+				display: none;
+			}
+			a{
+				text-decoration:none;
+				color:white;
+			}
+			#layer{
+                z-index:9998;
+                position: absolute;
+                background-color: rgba(0, 127, 127, 0.498039);
+				padding: 40px;
+				display: none;
+			}
+
+			#layer .close{
+				float: right;
+				padding: 2px 8px;
+			}
+
+			.list{
+				text-align: center;
+				margin-top: 0px;
+				height: 100%;
+				min-height: 700px;
+			}
+			.list li{
+				padding: 10px;
+			}
+			.list p {
+				display:inline;
+
+			}
+
+			
+			.pic img{
+				
+				float: center;
+				position: inherit;
+				margin-top: 10px;
+				width: 150px;
+				height: 60px;
+			}
+			#goodsViewer {
+				position: absolute;
+				background:url('images/bj2.jpg') no-repeat center center;
+				min-width: 468px;
+				min-height: 468px;
+				height: 100%;
+				width: 100%;
+				background-size: 100% 100%;
+				overflow:hidden;
+				z-index: -1;
+			}
+
+			#cover{
+				width: 100%;
+				height: 100%;
+				vertical-align: center;
+				position: absolute;
+				background: rgba(111,111,111,0.8);
+				z-index: 999;
+			}
+
+		  	#cover span{
+		  	    position: relative;
+		  		left: 40%;
+		  		top:50%;
+		 	 }
+			@media screen and (orientation:portrait) {
+			    /*  css[竖向定义样式]  */
+			    #cover{
+					display: block;
+				}
+			}
+
+			@media screen and (orientation:landscape) {
+			    /*   css[横向定义样式]  */
+			    #cover{
+			    	display: none;
+			    }
+
+			}
+		
+		</style>
+
+		<div id='cover' ><span>建议用横屏浏览</span></div>
+	
+		<div class="topLeft">
+			<li id="showParameter" style = "visibility:hidden">离开驾驶室</li>
+		</div>
+		<div class ="topRight" > <img id="menu" src="images/home.png"/>
+			<ul style="top:70px">
+				<!-- <li id='autoRotate'>自动旋转</li> -->
+				<li>
+					<ul class="models">车型
+						<li id="models_0">精英型</li>
+						<li id="models_1">豪华型</li>
+						<li id="models_2">尊贵型</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="color">车身颜色
+						<li id="color_0"  style="background-color:rgba(255,255,255,0.6)">宝马白</li>
+						<li id="color_1"  style="background-color:rgba(160,160,170,0.6)">闪光星河银</li>
+						<li id="color_2"  style="background-color:rgba(255,0,0,0.6)">俊雅红</li>
+						<li id="color_3"  style="background-color:rgba(100,100,100,0.6)">暴风灰</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="cheding_color">车顶辅色
+						<li id="cheding_color_0" >车身同色</li>
+						<li id="cheding_color_1"  style="background-color:rgba(160,160,170,0.6)">炭晶黑</li>
+						<li id="cheding_color_2"  style="background-color:rgba(255,255,255,0.6)">纯白</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="lahua">拉花
+						<li id="lahua_0">无</li>
+						<li id="lahua_1"  style="background-color:rgba(255,255,255,0.6)">赛道风云</li>
+						<li id="lahua_2"  style="background-color:rgba(255,255,150,0.6)">御风而行</li>
+						<li id="lahua_3"  style="background-color:rgba(0,0,255,0.6)">繁花似锦</li>
+						<li id="lahua_4"  style="background-color:rgba(0,255,0,0.6)">缤纷生活</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="peijian_color">运动配件
+						<li id="00">无</li>
+						<li id="01"  style="background-color:rgba(255,255,255,0.6)">白色</li>
+						<li id="02"  style="background-color:rgba(255,255,150,0.6)">黄色</li>
+						<li id="03"  style="background-color:rgba(0,0,255,0.6)">蓝色</li>
+						<li id="04"  style="background-color:rgba(0,255,0,0.6)">绿色</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="tianchuang">天窗
+						<li id="10">无</li>
+						<li id="11">有</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="boli">玻璃
+						<li id="20">普通</li>
+						<li id="21">隐私玻璃</li>
+					</ul>
+				</li>
+				<li id = 'TimeString'>加载时间</li>
+			</ul>
+		</div>	
+		<div class="goods-viewer" id="goodsViewer" style="visibility: visible;"></div>
+				
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="webgl/libs/jszip.min.js"></script>
+		<script src="webgl/libs/jszip-utils.min.js"></script>
+		<script src="webgl/three.min.js"></script>
+
+		<script src="webgl/OBJLoader.js"></script>
+		<script src="webgl/OrbitControls.js"></script>
+		<script src="webgl/libs/tween.min.js"></script>
+		<script src='webgl/libs/dat.gui.min.js'></script>
+		<script src="webgl/libs/stats.min.js"></script>
+
+		<script id="fragmentShader" type="x-shader/x-fragment">
+
+			uniform vec2 iResolution;
+			uniform float iGlobalTime;
+			varying vec2 vUv;
+
+			void mainImage( out vec4 fragColor, in vec2 fragCoord )
+			{
+				//vec2 uv = (2.0*fragCoord.xy-iResolution.xy)/iResolution.y;
+			    vec2 uv = -1.0 + 2.0 * vUv;
+			    float r = clamp(abs(sin(iGlobalTime)),0.5,0.9);//mod(iGlobalTime, 0.9);
+			    
+			    vec4 circleColour = vec4(0.0, 1.0, 1.0, 1.0);//vec4(snoise(vec2(r, r)), 0.5*snoise(uv*0.5), 0.5*snoise(uv*0.5), r);
+				vec4 backgroundColour = vec4(1.0, 1.0, 1.0, 0.0);
+			   
+				float dist = sqrt(dot(uv, uv));
+			    
+			    float t = 1.0 + smoothstep(r, r+0.2, dist) - smoothstep(r-0.2, r, dist);
+				fragColor = mix(circleColour, backgroundColour, t);
+			}
+
+			void main()	{
+				mainImage(gl_FragColor, gl_FragCoord.xy );	
+			}
+		</script>
+
+		<script id="vertexShader" type="x-shader/x-vertex">
+
+			varying vec2 vUv;
+
+			void main()
+			{
+				vUv = uv;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_Position = projectionMatrix * mvPosition;
+			}
+
+		</script>
+
+		<script src="js/defines.js"></script>
+		<script src="js/HTData.js"></script>
+		<script src="js/carViewer.js"></script>
+		<script src="js/car3d.js"></script>
+	</body>
+</html>
