@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>长安汽车-但愿人长久，相伴长安车</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link type="text/css" rel="stylesheet" href="css/css.css">
+		<style>
+			
+			
+		
+		</style>
+
+		<div id='cover' ><span>建议用横屏浏览</span></div>
+	
+	
+		
+		<div class="goods-viewer" id="goodsViewer" style="visibility: visible;"></div>
+				
+	</head>
+
+	<body>
+		<li id="showParameter" class="topLeft" style = "visibility:hidden">离开驾驶室</li>
+		<img id="menu" src="images/home.png"/>
+		 <div class="bottomMenu clearfix">
+
+
+		    <div id ="carType" class="menu">
+		        <div class="bt-name">车型</div>
+		        <div class="new-sub">
+		            <ul >
+		                <li><a href="javascript:;">精英型</a></li>
+		                <li><a href="javascript:;">豪华型</a></li>
+		                <li><a href="javascript:;">尊贵型</a></li>
+		            </ul>
+		            <div class="tiggle"></div>
+		            <div class="innertiggle"></div>
+		        </div>
+		               
+		    </div>
+
+
+		    <div id ="bodyColor" class="menu" >
+		     	<div class="bt-name">车身颜色</div>
+			    <div  class="new-sub">
+			        <ul>
+			            <!-- <li style="background:url('images/ui/cheshen/0.jpg') no-repeat center center;"title="宝马白"></li>
+			            <li style="background:url('images/ui/cheshen/1.jpg') no-repeat center center;"title="星河银"></li>
+			            <li style="background:url('images/ui/cheshen/2.jpg') no-repeat center center;"title="俊雅红"></li>
+			            <li style="background:url('images/ui/cheshen/3.jpg') no-repeat center center;"title="暴风灰"></li> -->
+			            <li title="宝马白"><img src='images/ui/cheshen/0.jpg' /></li>
+			            <li title="星河银"><img src='images/ui/cheshen/1.jpg' /></li>
+			            <li title="俊雅红"><img src='images/ui/cheshen/2.jpg' /></li>
+			            <li title="暴风灰"><img src='images/ui/cheshen/3.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+		    </div>
+
+		    <div  id ="topColor" class="menu" >
+		     	<div class="bt-name">车顶辅色</div>
+		     	 <div  class="new-sub">
+			        <ul>
+			            <li><a href="javascript:;">车身同色</a></li>
+			            <li title="炭晶黑"><img src='images/ui/cheding/3.jpg' /></li>
+			            <li title="纯白"><img src='images/ui/cheding/2.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+			</div>
+			<div  id ="lahua" class="menu" >
+		     	<div class="bt-name">拉花</div>
+		     	<div  class="new-sub">
+			        <ul>
+			            <li title="无"><img src='images/ui/0.png' /></li>
+			            <li title="赛道风云"><img src='images/ui/lahua/1.jpg' /></li>
+			            <li title="御风而行"><img src='images/ui/lahua/2.jpg' /></li>
+			            <li title="繁花似锦"><img src='images/ui/lahua/3.jpg' /></li>
+			            <li title="缤纷生活"><img src='images/ui/lahua/4.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+			</div>
+			<div  id ="peijian" class="menu" >
+		     	<div class="bt-name">运动配件</div>
+		     	<div  class="new-sub">
+			        <ul>
+			            <li title="无"><img src='images/ui/0.png' /></li>
+			            <li title="白"><img src='images/ui/peijian/1.jpg' /></li>
+			            <li title="黄"><img src='images/ui/peijian/2.jpg' /></li>
+			            <li title="蓝"><img src='images/ui/peijian/3.jpg' /></li>
+			            <li title="绿"><img src='images/ui/peijian/4.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+			</div>
+			<div  id ="tianchuang" class="menu" >
+		     	<div class="bt-name">天窗</div>
+		     	<div  class="new-sub">
+			        <ul>
+			            <li title="无"><img src='images/ui/0.png' /></li>
+			            <li title="有"><img src='images/ui/tianchuang/1.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+			</div>
+			<div  id ="boli" class="menu" >
+		     	<div class="bt-name">玻璃</div>
+		     	<div  class="new-sub">
+			        <ul>
+			            <li title="普通玻璃"><img src='images/ui/boli/0.jpg' /></li>
+			            <li title="隐私玻璃"><img src='images/ui/boli/1.jpg' /></li>
+			        </ul>
+			        <div class="tiggle"></div>
+			        <div class="innertiggle"></div>
+			    </div>
+			</div>
+			<div  id ="boli" class="menu" >
+				<li id = 'TimeString'class="bt-name">加载时间</div>
+			</div>
+
+		</div>
+		
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<script src="js/Detector.js"></script>
+		<script src="js/webgl.js"></script>
+
+		<script src="js/car3d.js"></script>
+
+
+		
+	</body>
+</html>
