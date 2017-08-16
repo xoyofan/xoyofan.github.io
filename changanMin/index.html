@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>长安汽车-但愿人长久，相伴长安车</title>
@@ -12,15 +12,29 @@
 		
 		</style>
 
-		<div id='cover' ><span>建议用横屏浏览</span></div>
-	
+		<!-- <div id='cover' ><span>建议用横屏浏览</span></div> -->
+	<!-- 	<div class="loading">
+			<img src= 'images/logo1.jpg' />
+			<span>加载中,请稍后...</span>
+		</div> -->
+
+		<div id="LoadingBG">
+            <img id="LoadingImage" src='images/logo1.jpg'>
+            <div id="LoadingProgressContainer">
+                <div id="LoadingProgress" style="width: 1.2941%;">
+                </div>
+            </div>
+            <div id='cover' >建议使用横屏浏览</div>
+        </div>
 	
 		
-		<div class="goods-viewer" id="goodsViewer" style="visibility: visible;"></div>
 				
 	</head>
 
 	<body>
+
+		<div class="goods-viewer" id="goodsViewer" style="visibility: visible;"></div>
+	
 		<li id="showParameter" class="topLeft" style = "visibility:hidden">离开驾驶室</li>
 		<img id="menu" src="images/home.png"/>
 		 <div class="bottomMenu clearfix">
